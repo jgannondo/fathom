@@ -1,6 +1,7 @@
-Fathom - simple website analytics
+Fathom Lite - simple website analytics
 ==============================
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ5WZVA9ER9GJ)
 [![Go Report Card](https://goreportcard.com/badge/github.com/usefathom/fathom)](https://goreportcard.com/report/github.com/usefathom/fathom)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/usefathom/fathom/master/LICENSE)
 
@@ -14,15 +15,44 @@ Google Analytics may give you free access to their services but in turn, they’
 
 We need to stop giving away our data and our users' privacy for free access to a tool.
 
-Fathom [respects the privacy of your users and does not collect any personally identifiable information](https://usefathom.com/data/). All while giving you the information you need about your site, so you can make smarter decisions about your design and content.
+Fathom respects the privacy of your users and does not collect any personally identifiable information. All while giving you the information you need about your site, so you can make smarter decisions about your design and content.
+
+At present, Fathom Analytics Lite is not PECR compliant due to the fact that it uses an anonymous cookie. Our [PRO version](https://usefathom.com) is PECR compliant, and we'll be making changes to this codebase some time in the future to make it compliant.
 
 ![Screenshot of the Fathom dashboard](https://github.com/usefathom/fathom/raw/master/assets/src/img/fathom.jpg?v=7)
 
+## Lite vs PRO
+
+We offer a [PRO version of Fathom Analytics](https://usefathom.com/#pricing) that starts at $14 / month. If you’d like to become a customer, we’d love to have you on board. You can signup for a [free 7-day trial of Fathom Analytics here](https://app.usefathom.com/register).
+
+![Screenshot of the PRO Dashboard](https://usefathom.com/assets/fathom-analytics.png)
+
+| Lite | Pro |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Uses Cookies| Cookie-free|
+|-|Track goal completions|
+|-|Share your site publicly or privately|
+|-|Device, Browser & Country Data|
+| No support (you can post an issue to our repo) | Fast and responsive support from the Fathom founders|
+| No guaranteed uptime | Fully redundant cloud-based architecture that keeps your stats online                                                                               |
+| Scaling requires you to power down and then upgrade your server | On-demand, automatic scaling, so even if your site goes viral, your stats won’t stop or slow down - we can handle billions of page views each month |
+| Manual backups, if you know how to set them up on your server | Real time backups included in the cost|
+| No data protection| Continuous data protection (in the event of a database hardware failure, we have a live standby database ready to go in another availability zone)|
+| Manual updates, via the command line| Automatic updates, patches and new versions at no extra cost, no coding required| 
+| Manual server hardening for security | Totally secure server, monitored and maintained by us, included in the price |
+| You pay for hosting, you have to do all the work to maintain the server, the code and backups | You pay us, we take care of everything for you|
+| Tracker file served via single server, from a single location | Tracker file served via our super-fast CDN, with endpoints located around the world to ensure fast page loads |
+| Data aggregation performed on a single server | Super fast data-aggregation spread across our cloud architecture |
+| Contribute to our repo| Supporting a privacy-focused, indie software company |    
+|| [Get started for free](https://app.usefathom.com/register) |
+
+
 ## Installation
+
 
 ### Production
 
-To install and run Fathom in production, [see the installation instructions](docs/Installation%20instructions.md).
+You can install Fathom on your server by following [our simple instructions](docs/Installation%20instructions.md).
 
 ### Development
 
@@ -32,7 +62,7 @@ For getting a development version of Fathom up & running, go through the followi
 1. Download the code: `git clone https://github.com/usefathom/fathom.git $GOPATH/src/github.com/usefathom/fathom` 
 1. Compile the project into an executable: `make build` 
 1. (Optional) Set [custom configuration values](docs/Configuration.md)
-1. (Optional) Register a user account: `./fathom user add --email=<email> --password=<password>`
+1. (Required) Register a user account: `./fathom user add --email=<email> --password=<password>`
 1. Start the webserver: `./fathom server` and then visit **http://localhost:8080** to access your analytics dashboard
 
 ## Docker
@@ -64,6 +94,11 @@ img-src: yourfathom.com;
 Find [our public roadmap here](https://trello.com/b/x2aBwH2J/fathom-roadmap). 
 
 If you have an idea or suggestion for Fathom, [submit it as an issue here on GitHub](https://github.com/usefathom/fathom/issues).
+
+## Donation
+If you're self-hosting Fathom Analytics Lite and want to support it's development, you can:
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ5WZVA9ER9GJ)
 
 ## Copyright and license
 
